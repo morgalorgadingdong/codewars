@@ -1,0 +1,32 @@
+function dirReduc(arr){
+  let reduced = true
+  while (reduced == true) {
+    let startingLength = arr.length
+    for (let i = 0; i < arr.length; i++) {
+      switch (arr[i]) {
+        case 'NORTH':
+          if (arr[i+1] == 'SOUTH') {
+            arr.splice(i,2)
+          }
+          break;
+        case 'SOUTH':
+          if (arr[i+1] == 'NORTH') {
+            arr.splice(i,2)
+          }
+          break;
+        case 'EAST':
+          if (arr[i+1] == 'WEST') {
+            arr.splice(i,2)
+          }
+          break;
+        case 'WEST':
+          if (arr[i+1] == 'EAST') {
+            arr.splice(i,2)
+          }
+          break;
+      }
+    }
+    arr.length == startingLength ? reduced = false : reduced = true
+  }
+  return arr
+}
