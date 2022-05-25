@@ -10,7 +10,7 @@ function rgb(r, g, b){
       r1 = code[((r - (r%16)) / 16)]
       r2 = code[(r%16)]
     } else if (r < 0) {
-      r1 = 0
+      r1 = 0  
       r2 = 0
     } else {
       r1 = 'F'
@@ -38,6 +38,3 @@ function rgb(r, g, b){
     }
     return `${r1}${r2}${g1}${g2}${b1}${b2}`
   }
-                
-                
-  //               ,'G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
