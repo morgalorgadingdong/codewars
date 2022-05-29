@@ -9,4 +9,4 @@ function alphabetPosition(text) {
       }
     })
     return output;
-  }
+  }  
